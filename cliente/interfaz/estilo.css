@@ -1,0 +1,22 @@
+/* -------------- VARIABLES GENERALS -------------- */
+html{
+    /* --- colores --- */
+    --bc: #404040;/* background-color */
+
+    /*  --- tamanys  --- */
+    --w: 510pt;     /* width */
+    --h: 232.5pt;   /* height */
+}
+
+#interfaz{ /* tamaño fijo 16:9 */
+    width: var(--w);
+    height: var(--h);
+    background-color: var(--bc);
+    border-radius: 15px;
+
+    /* centra pantalla */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);        
+}
