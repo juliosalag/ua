@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?&family=Nunito&display=swap');
+
 /* -------------- VARIABLES GENERALS -------------- */
 html{
-    /* --- colores --- */
-    --bc: #404040;/* background-color */
+    /* --- colors --- */
+    --bc: #404040; /* background-color */
+    --t: #fff;     /* text */
 
     /*  --- tamanys  --- */
-    --w: 510pt;     /* width */
-    --h: 232.5pt;   /* height */
+    --w: 510pt;      /* width */
+    --h: 232.5pt;    /* height */
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
 }
 
 #interfaz{ /* tamaño fijo 16:9 */
@@ -19,4 +26,25 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);        
+}
+
+button, a{
+    background-color: var(--bc);
+    border: none;
+    border-radius: 15px;
+    color: var(--t);
+    padding: 9pt;
+    margin: 9pt;
+    font-size: 23pt;
+}
+
+/* ELEMENTS ESPECÍFICS */
+#hora{
+    color: var(--t);
+    font-size: 23pt;
+}
+
+#izq_sup{
+    display: inline-flex;
+    align-items: center;
 }
