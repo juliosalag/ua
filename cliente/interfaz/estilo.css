@@ -36,6 +36,11 @@ button, a{
     padding: 9pt;
     margin: 9pt;
     font-size: 23pt;
+    cursor: pointer;
+}
+
+p{
+    color: var(--t);
 }
 
 /* ELEMENTS ESPECÍFICS */
@@ -44,7 +49,55 @@ button, a{
     font-size: 23pt;
 }
 
+#centro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #izq_sup{
-    display: inline-flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#izq_inf{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#der_sup{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#der_sup button{
+    margin: 9pt 9pt 0pt 0pt;
+    padding: 9pt 9pt 0pt 0pt;
+    font-size: 18pt;
+}
+
+#der_inf{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#der_inf button{
+    margin: 0pt 0pt 9pt 9pt;
+    padding: 0pt 0pt 9pt 9pt;
+    font-size: 9pt;
+}
+
+/* Carrusel */
+
+.idiomas-carrusel-contenedor{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }

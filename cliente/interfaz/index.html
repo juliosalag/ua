@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf8">
-	<!--Font Awesome-->
+	<!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>    
     <title>Index</title>
 	<title>Interfaz de Lavavajillas</title>
@@ -13,29 +13,28 @@
 </head>
 
 <body>
-	<!-- <div id="interfaz">
-		<div>Hora: <span id="hora">???</span></div>
-		<hr>
-		<div id="controles">
-			<div><label>Temperatura: <input id="temperatura" type="number" value="30" /></label></div>
-			<div><label>Tiempo: <input id="tiempo" type="number" value="30" /></label></div>
-			<div><button id="lavar">Lavar</button></div>
-		</div>
-		<hr />
-		<div>Esto es solo un ejemplo de interfaz. NO hacer una interfaz como esta. Para empezar ponte delante del lavavajillas.</div>
-	</div> -->
 	<div id="interfaz">
+		<!-- Izquierda -->
 		<div id="izq_sup">
-			<button><i class="fa-solid fa-power-off"></i></button>
+			<a href="apagado.html" style="margin: 0px; padding: 0px;"><button><i class="fa-solid fa-power-off"></i></button></a>
 			<span id="hora">???</span>
 		</div>
+		<div id="izq_inf">
+			<a href="ajustes.html" style="margin: 0px; padding: 0px;"><button><i class="fa-solid fa-gear"></i></button></a> 
+		</div>
+		<!-- Derecha -->
 		<div id="der_sup">
 			<button><i class="fa-solid fa-wifi"></i></button>
 			<button><i class="fa-solid fa-unlock"></i></button>
 			<button><i class="fa-solid fa-mobile-screen"></i></button>
 		</div>
-		<a href="ajustes.html"><i class="fa-solid fa-gear"></i></a>
-		
+		<!-- Lo dejo comentado para buscar mejores iconos
+		<div id="der_inf">
+			<button><i class="fa-solid fa-circle-exclamation"></i></button>
+			<button><i class="fa-solid fa-arrow-progress"></i></button>
+			<button><i class="fa-solid fa-brightness"></i></button>
+		</div>
+		-->
 	</div>
 </body>
 
