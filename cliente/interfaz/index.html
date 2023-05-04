@@ -7,13 +7,14 @@
     <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>    
     <title>Index</title>
 	<title>Interfaz de Lavavajillas</title>
-	<script src="main.js"></script>
 	<script src="../electro.js"></script>
+	<script src="main.js"></script>
 	<link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 	<div id="interfaz">
+		<!-- ------ BASE ------ -->
 		<!-- Izquierda -->
 		<div id="izq_sup">
 			<a href="apagado.html" style="margin: 0px; padding: 0px;"><button><i class="fa-solid fa-power-off"></i></button></a>
@@ -28,13 +29,26 @@
 			<button><i class="fa-solid fa-unlock"></i></button>
 			<button><i class="fa-solid fa-mobile-screen"></i></button>
 		</div>
-		<!-- Lo dejo comentado para buscar mejores iconos
-		<div id="der_inf">
+		<!-- Lo dejo comentado para buscar mejores iconos-->
+		<!-- <div id="der_inf">
 			<button><i class="fa-solid fa-circle-exclamation"></i></button>
-			<button><i class="fa-solid fa-arrow-progress"></i></button>
+			<button><i class="fa-solid fa-arrow-progress" style="color: aqua;"></i></button>
 			<button><i class="fa-solid fa-brightness"></i></button>
+		</div> -->
+		
+		<div id="controles">
+			<div id="cont_izq">
+				<a href="programas.html">P</a>
+				<a href="diferido.html"><i class="fa-regular fa-stopwatch"></i></a>	
+			</div>
+			<div id="reloj">
+				<i class="fa-regular fa-clock"></i>
+				AM
+			</div>
+			<div id="cont_der">
+				<button><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
 		</div>
-		-->
 	</div>
 </body>
 

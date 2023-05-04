@@ -13,6 +13,7 @@ html{
 
 *{
     font-family: 'Nunito', sans-serif;
+    text-decoration: none;
 }
 
 #interfaz{ /* tamaño fijo 16:9 */
@@ -92,6 +93,13 @@ p{
     margin: 0pt 0pt 9pt 9pt;
     padding: 0pt 0pt 9pt 9pt;
     font-size: 9pt;
+}
+#contenido{
+    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
 }
 
 /* Carrusel */
