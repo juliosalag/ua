@@ -2,3 +2,6 @@ servidor
 cliente/emulador
 cliente/electro.js
 cliente/index.html
+node_modules
+package-lock.json
+package.json
