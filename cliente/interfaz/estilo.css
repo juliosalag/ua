@@ -8,7 +8,9 @@ html{
 
     /*  --- tamanys  --- */
     --w: 510pt;      /* width */
+    --w2: 350pt;
     --h: 232.5pt;    /* height */
+    --h2: 125pt;
 }
 
 *{
@@ -94,12 +96,22 @@ p{
     padding: 0pt 0pt 9pt 9pt;
     font-size: 9pt;
 }
-#contenido{
+
+/* div de contenido */
+#controles{
     border: 1px solid #fff;
+    width: var(--w2);
+    height: var(--h2);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);  
+}
+#ctrl_izq{
+
+}
+#ctrl_der{
+
 }
 
 /* Carrusel */
