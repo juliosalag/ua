@@ -28,7 +28,7 @@ electro.on("connect", function () { // Esparar a que la librería se conecte con
 
     // Actualizar el reloj
     electro.on("reloj", function (hora) {
-        document.getElementById("hora").innerHTML = hora.getHours() + ":" + hora.getMinutes() + ":" + hora.getSeconds();
+        document.getElementById("hora").innerHTML = hora.getHours() + ":" + hora.getMinutes()/* + ":" + hora.getSeconds()*/;
     });
 
     // Con la presencia del usuario muestro los controles de cocinado
