@@ -11,3 +11,11 @@ setInterval(() => {
     minute.style.transform = `rotate(${min_rotation}deg)`;
     second.style.transform = `rotate(${sec_rotation}deg)`;
 }, 1000);
+
+ampm = document.getElementById("ampm");
+console.log(ampm);
+
+html = "";
+html += "am";
+
+ampm.innerAdjacentHTML += html;

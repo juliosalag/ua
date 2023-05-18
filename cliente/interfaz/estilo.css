@@ -98,7 +98,7 @@ p{
 
 /* div de contenido */
 #controles{
-    border: 1px solid #fff;
+    /*border: 1px solid #fff; */
     width: var(--w2);
     height: var(--h2);
     position: absolute;
