@@ -2,66 +2,69 @@
 <html>
 
 <head>
-	<meta charset="utf8">
-	<!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>    
+    <meta charset="utf8">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>
     <title>Index</title>
-	<title>Interfaz de Lavavajillas</title>
-	<script src="../electro.js"></script>
-	<script src="main.js"></script>
-	<script src="index.js"></script>
-	<link rel="stylesheet" href="estilo.css">
-	<link rel="stylesheet" href="reloj.css">
+    <title>Interfaz de Lavavajillas</title>
+    <script src="../electro.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="reloj.css">
 </head>
 
 <body>
-	<div id="interfaz">
-		<!-- ------ BASE ------ -->
-		<!-- Izquierda -->
-		<div id="izq_sup">
-			<a href="apagado.html" style="margin: 0px; padding: 0px;"><i class="fa-solid fa-power-off"></i></a>
-			<span id="hora">???</span>
-		</div>
-		<div id="izq_inf">
-			<a href="ajustes.html" style="margin: 0px; padding: 0px;"><i class="fa-solid fa-gear"></i></a> 
-		</div>
-		<!-- Derecha -->
-		<div id="der_sup">	<!-- alomejor cambiar lo de botón -->
-			<button><i class="fa-solid fa-wifi"></i></button>
-			<button><i class="fa-solid fa-unlock"></i></button>
-			<button><i class="fa-solid fa-mobile-screen"></i></button>
-		</div>
-		<!-- Lo dejo comentado para buscar mejores iconos-->
-		<!-- <div id="der_inf">
+    <div id="interfaz">
+        <!-- ------ BASE ------ -->
+        <!-- Izquierda -->
+        <div id="izq_sup">
+            <a href="apagado.html" style="margin: 0px; padding: 0px;"><i class="fa-solid fa-power-off"></i></a>
+            <span id="hora">???</span>
+        </div>
+        <div id="izq_inf">
+            <a href="ajustes.html" style="margin: 0px; padding: 0px;"><i class="fa-solid fa-gear"></i></a>
+        </div>
+        <!-- Derecha -->
+        <div id="der_sup">
+            <!-- alomejor cambiar lo de botón -->
+            <button><i class="fa-solid fa-wifi"></i></button>
+            <button><i class="fa-solid fa-unlock"></i></button>
+            <button><i class="fa-solid fa-mobile-screen"></i></button>
+        </div>
+        <!-- Lo dejo comentado para buscar mejores iconos-->
+        <!-- <div id="der_inf">
 			<button><i class="fa-solid fa-circle-exclamation"></i></button>
 			<button><i class="fa-solid fa-arrow-progress" style="color: aqua;"></i></button>
 			<button><i class="fa-solid fa-brightness"></i></button>
 		</div> -->
-		
-		<div id="controles">
-			<div id="ctrl_izq">
-				<a href="programas.html">P</a>
-				<a href="diferido.html"><i class="fa-solid fa-stopwatch fa-xs"></i></a>	<!-- cambiar icono o actualizar pack font awesome -->
-			</div>
-			<div id="reloj">
-				<div id="hour"></div>
-				<div id="minute"></div>
-				<div id="second"></div>
-				<div class="numbers">
-					<ul>
-					  <li>12</li>
-					  <li>3</li>
-					  <li>6</li>
-					  <li>9</li>
-					</ul>
-				</div>
-				<p id="ampm">Hola</p>
-			</div>
-			<div id="ctrl_der">
-				<button disabled id="atras"><i class="fa-solid fa-chevron-right"></i></button>
-			</div>
-		</div>
-	</div>
+
+        <div id="controles">
+            <div id="ctrl_izq">
+                <a href="programas.html">P</a>
+                <a href="diferido.html"><i class="fa-solid fa-stopwatch fa-xs"></i></a>
+                <!-- cambiar icono o actualizar pack font awesome -->
+            </div>
+            <div id="reloj">
+                <div id="hour"></div>
+                <div id="minute"></div>
+                <div id="second"></div>
+                <div class="numbers">
+                    <ul>
+                        <li>12</li>
+                        <li>3</li>
+                        <li>6</li>
+                        <li>9</li>
+                    </ul>
+                </div>
+                <p id="ampm" style="text-align: right;"></p>
+            </div>
+            <div id="ctrl_der">
+                <button disabled id="atras"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="index.js"></script>
 
 </html>

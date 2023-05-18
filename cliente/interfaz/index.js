@@ -6,16 +6,12 @@ setInterval(() => {
     hr_rotation = 30 * hr + min / 2; //converting current time
     min_rotation = 6 * min;
     sec_rotation = 6 * sec;
-  
+
     hour.style.transform = `rotate(${hr_rotation}deg)`;
     minute.style.transform = `rotate(${min_rotation}deg)`;
     second.style.transform = `rotate(${sec_rotation}deg)`;
+
+    let ampm = document.getElementById("ampm");
+    ampm.innerHTML = hr < 12 ? "AM" : "PM";
+
 }, 1000);
-
-ampm = document.getElementById("ampm");
-console.log(ampm);
-
-html = "";
-html += "am";
-
-ampm.innerAdjacentHTML += html;
