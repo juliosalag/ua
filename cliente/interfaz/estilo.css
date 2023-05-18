@@ -8,9 +8,9 @@ html{
 
     /*  --- tamanys  --- */
     --w: 510pt;      /* width */
-    --w2: 350pt;
+    --w2: 330pt;
     --h: 232.5pt;    /* height */
-    --h2: 125pt;
+    --h2: 145pt;
 }
 
 *{
@@ -105,13 +105,23 @@ p{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: space-between;
 }
 #ctrl_izq{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #ctrl_der{
+    display: flex;
+    align-items: flex-end;
+}
 
+#controles > div > *{
+    margin: 0;
 }
 
 /* Carrusel */

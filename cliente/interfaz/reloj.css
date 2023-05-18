@@ -2,20 +2,13 @@
 
 #reloj {
     position: relative;
-    margin: auto;
-    height: 120pt;
-    /*to make the height and width responsive*/
-    width: 120pt;
-    background-color: var(--bc);
-    border: 2px solid var(--t);
+    height: 140pt;
+    width: 140pt;
+    border: 4px solid var(--t);
     border-radius: 50%;
-    /*setting our background image*/
-    background-size: 100%;
 }
   
-#hour,
-#minute,
-#second {
+#hour, #minute, #second {
     position: absolute;
     background: var(--t);
     border-radius: 10px;
@@ -23,27 +16,27 @@
 }
   
 #hour {
-    width: 1.8%;
+    width: 2.5%;
     height: 25%;
     top: 25%;
-    left: 48.85%;
-    opacity: 0.8;
+    left: 50%;
+    opacity: 0.9;
 }
   
 #minute {
-    width: 1.6%;
+    width: 1.8%;
     height: 30%;
     top: 19%;
-    left: 48.9%;
-    opacity: 0.8;
+    left: 50%;
+    opacity: 0.9;
 }
   
 #second {
-    width: 1%;
+    width: 1.3%;
     height: 40%;
     top: 9%;
-    left: 49.25%;
-    opacity: 0.8;
+    left: 50%;
+    opacity: 0.9;
 }
 
 .numbers{
