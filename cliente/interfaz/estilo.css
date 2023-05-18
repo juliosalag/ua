@@ -39,8 +39,6 @@ button, a{
     border: none;
     border-radius: 15px;
     color: var(--t);
-    padding: 9pt;
-    margin: 9pt;
     font-size: 23pt;
     cursor: pointer;
 }
@@ -68,6 +66,7 @@ p{
 #izq_sup > span{
     padding-left: .75em;
     font-size: 1.75em;
+    display: none; /*quitar en el resto*/
 }
 
 #der_sup{

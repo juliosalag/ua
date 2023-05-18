@@ -79,3 +79,7 @@
     left:0;
     margin-top:-0.75em;
 }
+
+#ampm{
+    text-align: right;
+}
