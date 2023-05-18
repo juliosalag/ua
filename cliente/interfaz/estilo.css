@@ -8,7 +8,7 @@ html{
 
     /*  --- tamanys  --- */
     --w: 510pt;      /* width */
-    --w2: 330pt;
+    --w2: 310pt;
     --h: 232.5pt;    /* height */
     --h2: 145pt;
 }
@@ -28,7 +28,10 @@ html{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);        
+    transform: translate(-50%, -50%);
+    
+    display: grid;
+    align-content: space-between;
 }
 
 button, a{
@@ -59,16 +62,12 @@ p{
     align-items: center;
 }
 
-#izq_sup{
-    position: absolute;
-    top: 0;
-    left: 0;
+#izq_sup, #izq_inf{
+    padding: 1.5em;
 }
-
-#izq_inf{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+#izq_sup > span{
+    padding-left: .75em;
+    font-size: 1.75em;
 }
 
 #der_sup{
@@ -115,6 +114,9 @@ p{
     flex-direction: column;
     justify-content: space-between;
 }
+#ctrl_izq > a{
+    font-size: 3em;
+}
 #ctrl_der{
     display: flex;
     align-items: flex-end;
@@ -122,10 +124,15 @@ p{
 
 #controles > div > *{
     margin: 0;
+    padding: 0;
+}
+
+#atras:disabled{
+    color: var(--bc);
+    cursor: auto;
 }
 
 /* Carrusel */
-
 .idiomas-carrusel-contenedor{
     display: flex;
     justify-content: center;
