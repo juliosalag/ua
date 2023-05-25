@@ -1,28 +1,29 @@
 .grid {
-	--gap: 16px;
+    --h-gap: 2.4em;
+    --v-gap: 2.25em;
 	--num-cols: 4;
 
 	display: grid;
 
-	gap: var(--gap);
+    grid-row-gap: var(--v-gap); /* Set the vertical gap */
+    grid-column-gap: var(--h-gap); /* Set the horizontal gap */
 	grid-template-columns: repeat(var(--num-cols), 1fr);
     align-items: stretch;
 }
 
-/* .image-grid > article {
-	width: 100%;
-	height: auto;
-}
-
-.image-grid > article > a > img {
-	width: 100%; /* s'ajusta al tamany del article 
-	height: 10em; /* altura fixa 
-    object-fit: cover; /* s'ajusta al contenedor i es veu com en xicotet 
-} */
-
 .botones{
-    font-size: 1em;
+    font-size: 2em;
     background-color: var(--bc50);
     color: var(--bc);
-    height: 100%;
+}
+
+.botones img {
+    max-height: 80%;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+.botones > i{
+    font-size: 1.25em;
+    display: block;
 }
