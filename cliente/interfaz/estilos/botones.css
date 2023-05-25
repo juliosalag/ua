@@ -1,0 +1,28 @@
+.grid {
+	--gap: 16px;
+	--num-cols: 4;
+
+	display: grid;
+
+	gap: var(--gap);
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+    align-items: stretch;
+}
+
+/* .image-grid > article {
+	width: 100%;
+	height: auto;
+}
+
+.image-grid > article > a > img {
+	width: 100%; /* s'ajusta al tamany del article 
+	height: 10em; /* altura fixa 
+    object-fit: cover; /* s'ajusta al contenedor i es veu com en xicotet 
+} */
+
+.botones{
+    font-size: 1em;
+    background-color: var(--bc50);
+    color: var(--bc);
+    height: 100%;
+}

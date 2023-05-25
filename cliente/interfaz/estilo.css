@@ -1,15 +1,20 @@
+@import url(estilos/botones.css);
+@import url(estilos/reloj.css);
+@import url(estilos/otros.css);
+
 @import url('https://fonts.googleapis.com/css2?&family=Nunito&display=swap');
 
 /* -------------- VARIABLES GENERALS -------------- */
 html{
-    /* --- colors --- */
-    --bc: #404040; /* background-color */
-    --t: #fff;     /* text */
+    /* ------ colors ------ */
+    --bc: #404040;      /* background-color */
+    --bc50: #A0A0A0;    /* background-color 50% */
+    --t: #fff;          /* text */
 
-    /*  --- tamanys  --- */
-    --w: 510pt;      /* width */
+    /* ------ tamanys ------ */
+    --w: 510pt;           /* width */
     --w2: 310pt;
-    --h: 232.5pt;    /* height */
+    --h: 232.5pt;         /* height */
     --h2: 145pt;
 }
 
@@ -105,7 +110,6 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    display: flex;
     justify-content: space-between;
 }
 #ctrl_izq{
@@ -126,6 +130,11 @@ p{
     padding: 0;
 }
 
+#atras{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 #atras:disabled{
     color: var(--bc);
     cursor: auto;
