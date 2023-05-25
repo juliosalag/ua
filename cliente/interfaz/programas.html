@@ -6,7 +6,6 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>
     <title>Programas</title>
-    <title>Interfaz de Lavavajillas</title>
     <script src="../electro.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="estilo.css">
@@ -17,18 +16,18 @@
         <!-- ------ BASE ------ -->
         <!-- Izquierda -->
         <div id="izq_sup">
-            <a href="apagado.html"><i class="fa-solid fa-power-off"></i></a>
+            <a href="apagado.html" title="Power-off"><i class="fa-solid fa-power-off"></i></a>
             <span id="hora">???</span>
         </div>
         <div id="izq_inf">
-            <a href="ajustes.html"><i class="fa-solid fa-gear"></i></a>
+            <a href="ajustes.html" title="Ajustes"><i class="fa-solid fa-gear"></i></a>
         </div>
         <!-- Derecha -->
         <div id="der_sup">
             <!-- alomejor cambiar lo de botón -->
-            <button><i class="fa-solid fa-wifi"></i></button>
-            <button><i class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
-            <button><i class="fa-solid fa-mobile-screen"></i></button>
+            <button title="wifi"><i class="fa-solid fa-wifi"></i></button>
+            <button title="estado puerta"><i class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
+            <button title="móvil conectado"><i class="fa-solid fa-mobile-screen"></i></button>
         </div>
         <!-- Lo dejo comentado para buscar mejores iconos-->
         <!-- <div id="der_inf">
@@ -37,15 +36,15 @@
 			<button><i class="fa-solid fa-brightness"></i></button>
 		</div> -->
 
-        <div id="controles" class="grid"> <!-- mirar que programas poner -->
-            <button class="botones"><i class="fa-solid fa-leaf"></i></button>
-            <button class="botones"><i class="fa-solid fa-stopwatch-20"></i></button>
-            <button class="botones"><img src="src/intensivo.png" alt="programa intensivo"></button>
-            <button class="botones"><i class="fa-solid fa-wine-glass-empty"></i></button>
-            <button class="botones"><i class="fa-solid fa-moon"></i></button>
-            <button class="botones"><i class="fa-solid fa-a"></i></button>
-            <button class="botones"><b>½</b></button>
-            <a id="atras" href="index.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div id="controles" class="grid" title="selección de programa de lavado"> <!-- mirar que programas poner -->
+            <button class="botones" title="Programa eco"><i class="fa-solid fa-leaf"></i></button>
+            <button class="botones" title="Programa rápido"><i class="fa-solid fa-stopwatch-20"></i></button>
+            <button class="botones" title="Programa intensivo"><img src="src/intensivo.png" alt="programa intensivo"></button>
+            <button class="botones" title="Programa copas"><i class="fa-solid fa-wine-glass-empty"></i></button>
+            <button class="botones" title="Programa silencioso"><i class="fa-solid fa-moon"></i></button>
+            <button class="botones" title="Programa automático"><i class="fa-solid fa-a"></i></button>
+            <button class="botones" title="Programa media carga"><b>½</b></button>
+            <a id="atras" href="index.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
         </div>
     </div>
 </body>
