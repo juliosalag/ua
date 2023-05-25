@@ -1,6 +1,6 @@
 .grid {
     --h-gap: 2.4em;
-    --v-gap: 2.25em;
+    --v-gap: 2em;
 	--num-cols: 4;
 
 	display: grid;
@@ -16,14 +16,13 @@
     background-color: var(--bc50);
     color: var(--bc);
 }
-
-.botones img {
-    max-height: 80%;
-    max-width: 80%;
-    display: block;
-    margin: 0 auto;
-}
-.botones > i{
-    font-size: 1.25em;
-    display: block;
-}
+    .botones img {
+        max-height: 75%;
+        max-width: 75%;
+        display: block;
+        margin: 0 auto;
+    }
+    .botones > i{
+        font-size: 1.2em;
+        display: block;
+    }

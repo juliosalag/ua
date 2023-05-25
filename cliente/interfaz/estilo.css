@@ -15,7 +15,7 @@ html{
     --w: 510pt;           /* width */
     --w2: 310pt;
     --h: 232.5pt;         /* height */
-    --h2: 145pt;
+    --h2: 125pt;
 }
 
 *{
@@ -54,8 +54,10 @@ p{
 
 /* ELEMENTS ESPECÍFICS */
 #hora{
+    padding-left: .75em;
     color: var(--t);
-    font-size: 23pt;
+    font-size: 1.6em;
+    opacity: 95%;
 }
 
 #centro{
@@ -68,37 +70,32 @@ p{
 #izq_sup, #izq_inf{
     padding: 1.5em;
 }
-#izq_sup > span{
-    padding-left: .75em;
-    font-size: 1.75em;
-    display: none; /*quitar en el resto*/
+
+#der_sup, #der_inf{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
 }
 
 #der_sup{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
     top: 0;
     right: 0;
 }
-#der_sup button{
-    margin: 9pt 9pt 0pt 0pt;
-    padding: 9pt 9pt 0pt 0pt;
-    font-size: 18pt;
-}
+    #der_sup button{
+        margin: 9pt 9pt 0pt 0pt;
+        padding: 9pt 9pt 0pt 0pt;
+        font-size: 18pt;
+    }
 
 #der_inf{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
     bottom: 0;
     right: 0;
 }
-#der_inf button{
-    margin: 0pt 0pt 9pt 9pt;
-    padding: 0pt 0pt 9pt 9pt;
-    font-size: 9pt;
-}
+    #der_inf button{
+        margin: 0pt 0pt 9pt 9pt;
+        padding: 0pt 0pt 9pt 9pt;
+        font-size: 9pt;
+    }
 
 /* div de contenido */
 #controles{
@@ -112,23 +109,25 @@ p{
 
     justify-content: space-between;
 }
+
 #ctrl_izq{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-#ctrl_izq > a{
-    font-size: 3em;
-}
+    #ctrl_izq > a{
+        font-size: 3em;
+    }
+
 #ctrl_der{
     display: flex;
     align-items: flex-end;
 }
 
-#controles > div > *{
-    margin: 0;
-    padding: 0;
-}
+    #controles > div > *{
+        margin: 0;
+        padding: 0;
+    }
 
 #atras{
     position: absolute;
@@ -138,11 +137,4 @@ p{
 #atras:disabled{
     color: var(--bc);
     cursor: auto;
-}
-
-/* Carrusel */
-.idiomas-carrusel-contenedor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
