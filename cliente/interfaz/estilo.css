@@ -98,7 +98,7 @@ p{
     }
 
 /* div de contenido */
-#controles{
+#controles, dialog{
     /*border: 1px solid #fff; */
     width: var(--w2);
     height: var(--h2);
@@ -131,6 +131,7 @@ p{
 
 #atras{
     position: absolute;
+    padding: 0;
     bottom: 0;
     right: 0;
 }
@@ -138,3 +139,23 @@ p{
     color: var(--bc);
     cursor: auto;
 }
+
+/* DIALOG */
+dialog {
+    color: var(--t);
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bc);
+}
+dialog::backdrop{ 
+    background-color: rgba(125, 130, 184, .5);
+} 
+/* dialog > h2{
+    color: var(--violet);
+    font-size: x-large;
+    margin-bottom: .5em;
+}
+dialog > p{
+    font-size: large;
+} */

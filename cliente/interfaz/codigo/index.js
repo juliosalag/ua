@@ -38,3 +38,44 @@ function customStyle(){
         hora.style.setProperty('display', 'none');
     }
 }
+
+function programa(){
+    let botones = document.querySelectorAll('.botones'),
+        dialogo = document.createElement('dialog'),
+        //descripciones para cada programa (MIRAR DE CAMBIAR FORMATO (JSON))
+        descrip = [ 'Limpia la vajilla consumiendo menos agua y electricidad en cada lavado.',
+                    'Adecuado para lavado rápido y vajillas con poca suciedad.',
+                    'Lavado de cacerolas, sartenes, vajilla y cubiertos no delicados. Elimina restos de alimentos resecos, fuertemente incrustados o quemados.',
+                    'Adecuado para vajilla delicada o sensibles a altas temperaturas.',
+                    'Funcionamiento más sensible y silencioso. Se reduce la presión de ruido del lavado.',
+                    'Optimiza el lavado en función del grado de suciedad del agua mediante el sistema de sensores.',
+                    'Lavado de la vajilla colocada en la mitad superior o inferior del lavavajillas. La otra mitad no será lavada.'],
+        html = '';
+
+    //recorre todos los botones
+    botones.forEach(function (boton, i) {
+        //se cogen los parametros del boton
+        boton.addEventListener('click', function () {
+            let dialogo = document.createElement('dialog'),
+                dBoton = document.createElement('button'); //copia boton
+            
+            dBoton.className = 'botones';
+            dBoton.title = boton.title;
+            dBoton.innerHTML = boton.innerHTML;
+            
+            let html = `${dBoton.outerHTML}
+                        <h2>${this.title}</h2>
+                        <p>${descrip[i]}</p>
+                        <button id="atras" onclick="cerrarDialogo(0);" class="boton" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></button>`;
+    
+            dialogo.innerHTML = html;
+            document.body.appendChild(dialogo);
+            dialogo.showModal();
+        });
+    });
+}
+
+function cerrarDialogo(valor){
+    document.querySelector('dialog').close(); //en açò NOMÉS no es borra del html
+    document.querySelector('dialog').remove(); //en açò si
+}
