@@ -1,9 +1,12 @@
-.d3{ /* contenedor dividido en 3 */
+.d3 {
+    /* contenedor dividido en 3 */
     display: flex;
 }
 
+
 /* Carrusel */
-.idiomas-carrusel-contenedor{
+
+.idiomas-carrusel-contenedor {
     display: flex;
     justify-content: center;
     align-items: center;

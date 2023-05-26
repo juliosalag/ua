@@ -27,7 +27,7 @@
         <div id="der_sup">
             <!-- alomejor cambiar lo de botón -->
             <button title="wifi"><i class="fa-solid fa-wifi"></i></button>
-            <button title="estado puerta"><i class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
+            <button title="estado puerta"><i id="desactivar"  class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
             <button title="móvil conectado"><i class="fa-solid fa-mobile-screen"></i></button>
         </div>
         <!-- Lo dejo comentado para buscar mejores iconos-->
@@ -55,7 +55,8 @@
                         <li>9</li>
                     </ul>
                 </div>
-                <p id="ampm"></p><!-- ajussstar CSS -->
+                <p id="ampm"></p>
+                <!-- ajussstar CSS -->
             </div>
             <div id="ctrl_der">
                 <button disabled id="atras"><i class="fa-solid fa-chevron-right"></i></button>
@@ -68,4 +69,7 @@
 <script>
     customStyle();
 </script>
+
+<script src="codigo/bloquear.js"></script>
+
 </html>

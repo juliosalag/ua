@@ -26,7 +26,7 @@
         <div id="der_sup">
             <!-- alomejor cambiar lo de botón -->
             <button title="wifi"><i class="fa-solid fa-wifi"></i></button>
-            <button title="estado puerta"><i class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
+            <button title="estado puerta"><i id="desactivar"  class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
             <button title="móvil conectado"><i class="fa-solid fa-mobile-screen"></i></button>
         </div>
         <!-- Lo dejo comentado para buscar mejores iconos-->
@@ -36,7 +36,8 @@
 			<button><i class="fa-solid fa-brightness"></i></button>
 		</div> -->
 
-        <div id="controles" class="grid" title="selección de programa de lavado"> <!-- mirar que programas poner -->
+        <div id="controles" class="grid" title="selección de programa de lavado">
+            <!-- mirar que programas poner -->
             <button class="botones" title="Programa eco"><i class="fa-solid fa-leaf"></i></button>
             <button class="botones" title="Programa rápido"><i class="fa-solid fa-stopwatch-20"></i></button>
             <button class="botones" title="Programa intensivo"><img src="src/intensivo.png" alt="programa intensivo"></button>
@@ -54,4 +55,7 @@
     getPagina();
     programa();
 </script>
+
+<script src="codigo/bloquear.js"></script>
+
 </html>

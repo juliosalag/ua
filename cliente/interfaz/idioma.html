@@ -2,27 +2,29 @@
 <html>
 
 <head>
-	<meta charset="utf8">
-	<!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>    
+    <meta charset="utf8">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>
     <title>Index</title>
-	<title>Interfaz de Lavavajillas</title>
-	<script src="../electro.js"></script>
-	<script src="main.js"></script>
-	<link rel="stylesheet" href="estilo.css">
+    <title>Interfaz de Lavavajillas</title>
+    <script src="../electro.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="otros.css">
 </head>
 
 <body>
-	<div id="interfaz">
-		<!-- Izquierda -->
-		<div id="izq_sup">
-			<a href="apagado.html" style="margin: 0px; padding: 0px;"><button><i class="fa-solid fa-power-off"></i></button></a>
-		</div>
-		<div id="izq_inf">
-			<a href="ajustes.html" style="margin: 0px; padding: 0px;"><button><i class="fa-solid fa-gear"></i></button></a> 
-		</div>
+    <div id="interfaz">
+        <!-- Izquierda -->
+        <div id="izq_sup">
+            <a href="apagado.html" title="Power-off"><i class="fa-solid fa-power-off"></i></a>
+            <span id="hora">???</span>
+        </div>
+        <div id="izq_inf">
+            <a href="ajustes.html" title="Ajustes"><i class="fa-solid fa-gear"></i></a>
+        </div>
         <!-- Carrusel de Idiomas -->
-        <div class="idiomas-carrusel-contenedor">
+        <div class="idiomas-carrusel-contenedor d3" id="controles">
             <i class="fa-solid fa-chevron-left" style="margin: 0pt 15pt; font-size: 20pt; color: #ffffff;"></i>
             <div class="idiomas-carrusel-item">
                 <img src="src/ad.png" style="width: 100pt; margin: 15pt;">
@@ -36,9 +38,11 @@
             <i class="fa-solid fa-chevron-right" style="margin: 0pt 15pt; font-size: 20pt; color: #ffffff;"></i>
         </div>
         <div id="centro">
-            <a href="index.html" style="margin: 0px; padding: 0px; text-decoration: none;"><p style="font-size: 20pt;">Aceptar</p></a>
+            <a href="index.html" style="margin: 0px; padding: 0px; text-decoration: none;">
+                <p style="font-size: 20pt;">Aceptar</p>
+            </a>
         </div>
-	</div>
+    </div>
 </body>
 
 </html>
