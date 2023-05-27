@@ -175,3 +175,10 @@ dialog > p{
 .transparente {
     opacity: 0.5;
 }
+
+#vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+}
