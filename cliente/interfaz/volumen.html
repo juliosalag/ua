@@ -30,10 +30,14 @@
         </div>
         <!-- Base -->
         <div id="controles" class="d3">
-            <img src="src/movil.PNG" alt="Imagen de un movil">
-            <div id="vertical" style="margin-left: 2em;">
-                <h2>Teléfono conectado</h2>
-                <h3>iPhone 13</h3>
+            <div id="vertical">
+                <h2>Volumen</h2>
+                <div id="horizontal">
+                    <button><i class="fa-solid fa-volume-high"></i></button>
+                    <div class="slider-container">
+                        <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider">
+                    </div>
+                </div>
             </div>
             <a id="atras" href="index.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
         </div>
@@ -48,5 +52,14 @@
 </body>
 
 <script src="codigo/bloquear.js"></script>
+
+<script>
+    const volumeSlider = document.getElementById('volumeSlider');
+    volumeSlider.value = sessionStorage.getItem('volumen');
+
+    volumeSlider.addEventListener('input', function() {
+      sessionStorage.setItem('volumen', this.value);
+    });
+</script>
 
 </html>
