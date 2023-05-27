@@ -31,9 +31,9 @@
         <!-- Base -->
         <div id="controles" class="d3">
             <div id="vertical">
-                <h2>Volumen</h2>
+                <h2>Micrófono</h2>
                 <div id="horizontal">
-                    <button><i class="fa-solid fa-volume-high"></i></button>
+                    <button><i class="fa-solid fa-microphone"></i></button>
                     <div class="slider-container">
                         <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider">
                     </div>
@@ -55,10 +55,10 @@
 
 <script>
     const volumeSlider = document.getElementById('volumeSlider');
-    volumeSlider.value = sessionStorage.getItem('volumen');
+    volumeSlider.value = sessionStorage.getItem('microfono');
 
     volumeSlider.addEventListener('input', function() {
-      sessionStorage.setItem('volumen', this.value);
+      sessionStorage.setItem('microfono', this.value);
     });
 </script>
 
