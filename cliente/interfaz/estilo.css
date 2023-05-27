@@ -110,6 +110,18 @@ p{
     justify-content: space-between;
 }
 
+h2{
+    font-size: 2.3em;
+    padding-left: 1em;
+    color: var(--t);
+}
+
+h3{
+    font-size: 1.2em;
+    padding-left: 1em;
+    color: var(--bc50);
+}
+
 #ctrl_izq{
     display: flex;
     flex-direction: column;
@@ -159,3 +171,7 @@ dialog::backdrop{
 dialog > p{
     font-size: large;
 } */
+
+.transparente {
+    opacity: 0.5;
+}

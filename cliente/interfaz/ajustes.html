@@ -10,6 +10,7 @@
     <script src="../electro.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilos/botones.css">
 </head>
 
 <body>
@@ -19,14 +20,14 @@
             <a href="apagado.html"><button><i class="fa-solid fa-power-off"></i></button></a>
             <span id="hora">???</span>
         </div>
-        <div id="izq_inf">
+        <!--<div id="izq_inf">
             <a href="ajustes.html"><button><i class="fa-solid fa-gear"></i></button></a>
-        </div>
+        </div>-->
         <!-- Derecha -->
         <div id="der_sup">
             <button><i class="fa-solid fa-wifi"></i></button>
             <button><i id="desactivar" class="fa-solid fa-unlock"></i></button>
-            <button><i class="fa-solid fa-mobile-screen"></i></button>
+            <button onclick="window.location.href = 'homeconnect-conectado.html'"><i class="fa-solid fa-mobile-screen"></i></button>
         </div>
         <!-- Lo dejo comentado para buscar mejores iconos
 		<div id="der_inf">
@@ -39,11 +40,11 @@
             <!-- mirar que programas poner -->
             <button class="botones" title="Volumen"><i class="fa-solid fa-volume-high"></i></button>
             <button class="botones" title="Ajustar Wifi"><i class="fa-solid fa-wifi"></i></button>
-            <button class="botones" title="Conectar home connect"><i class="fa-light fa-mobile"></i></button>
+            <button class="botones" title="Conectar home connect" onclick="window.location.href = 'homeconnect.html'"><i class="fa-solid fa-mobile-screen"></i></button>
             <button class="botones" title="Tamaño de letra">Aa</i></button>
             <button class="botones" title="Nivel microfono"><i class="fa-solid fa-microphone"></i></button>
-            <button class="botones" title="Cambiar hora"><i class="fa-regular fa-clock-three"></i></button>
-            <button class="botones" title="Idioma"><i class="fa-thin fa-language"></i></button>
+            <button class="botones" title="Cambiar hora"><i class="fa-regular fa-clock"></i></button>
+            <button class="botones" title="Idioma" onclick="window.location.href = 'idioma.html'"><i class="fa-solid fa-language"></i></button>
             <a id="atras" href="index.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
         </div>
     </div>
