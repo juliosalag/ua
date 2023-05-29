@@ -83,11 +83,34 @@ function programa() {
             botonera.insertAdjacentHTML('afterbegin', html);
             modal.insertAdjacentHTML('beforeend', info);
 
-            prg = this.title;
-            //lavar.addEventListener('click', infoLavado(this.title));
+            prg = this.title; //asignar variable global
+            deshabilitarBotones();
         });
     });
 }
+
+//si estem en info-programa, deshabilitar botons elecció de programa
+function deshabilitarBotones(){
+    let pagina = window.location.href.split('#').pop();
+    
+    if(pagina == 'mprograma'){
+        //disablejar tots els botons
+        let botones = document.querySelectorAll('.botones'),
+            atras = document.getElementById('atras');
+
+        botones.forEach(function(boton, i) {   
+            boton.setAttribute('disabled', 'true');
+        });
+        atras.setAttribute('tabindex', '-1'); //s'havia quedat l'enllaç per darrere tabejable
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+      const focusedElement = document.activeElement;
+      console.log(focusedElement); // Output: The currently focused element
+    }
+  });
 
 // settear info de lavado en el sessionStorage
 function infoLavado(prg){
