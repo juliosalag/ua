@@ -101,7 +101,7 @@ p{
     }
 
 /* div de contenido */
-#controles, dialog{
+#controles{
     /*border: 1px solid #fff; */
     width: var(--w2);
     height: var(--h2);
@@ -111,18 +111,6 @@ p{
     transform: translate(-50%, -50%);
 
     justify-content: space-between;
-}
-
-h2{
-    font-size: 2.3em;
-    padding-left: 1em;
-    color: var(--t);
-}
-
-h3{
-    font-size: 1.2em;
-    padding-left: 1em;
-    color: var(--bc50);
 }
 
 #ctrl_izq{
@@ -155,26 +143,42 @@ h3{
     cursor: auto;
 }
 
+.transparente {
+    opacity: 0.5;
+}
+
 /* DIALOG */
-dialog {
+/* dialog {
     color: var(--t);
     border: none;
     margin: 0;
     padding: 0;
     background-color: var(--bc);
-}
-dialog::backdrop{ 
-    background-color: rgba(125, 130, 184, .5);
-} 
-/* dialog > h2{
-    color: var(--violet);
-    font-size: x-large;
-    margin-bottom: .5em;
-}
-dialog > p{
-    font-size: large;
 } */
 
-.transparente {
-    opacity: 0.5;
-}
+/*modal*/  
+  /* The modal's background */
+  .modal {
+    background-color: var(--bc);
+    display: none;
+  }
+  
+  /* Display the modal when targeted */
+  .modal:target {
+    display: flex;
+    position: fixed;
+    box-shadow: 0px 0px 0px 5px rgb(64 64 64);
+  }
+
+  .modal > header{
+      color: var(--t);
+      display: inline-flex;
+      justify-content: space-between;
+  }
+  
+  .closebtn {
+    float: right;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--t);
+  }  

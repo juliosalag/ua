@@ -43,7 +43,6 @@ function customStyle() {
 
 function programa() {
     let botones = document.querySelectorAll('.botones'),
-        dialogo = document.createElement('dialog'),
         //descripciones para cada programa (MIRAR DE CAMBIAR FORMATO (JSON))
         descrip = ['Limpia la vajilla consumiendo menos agua y electricidad en cada lavado.',
             'Adecuado para lavado rápido y vajillas con poca suciedad.',
@@ -52,29 +51,38 @@ function programa() {
             'Funcionamiento más sensible y silencioso. Se reduce la presión de ruido del lavado.',
             'Optimiza el lavado en función del grado de suciedad del agua mediante el sistema de sensores.',
             'Lavado de la vajilla colocada en la mitad superior o inferior del lavavajillas. La otra mitad no será lavada.'
-        ],
-        html = '';
+        ];
 
     //recorre todos los botones
     botones.forEach(function(boton, i) {
         //se cogen los parametros del boton
         boton.addEventListener('click', function() {
-            let dialogo = document.createElement('dialog'),
-                dBoton = document.createElement('button'); //copia boton
+            let /* dialogo = document.createElement('dialog'), */
+                url = '#mprograma',
+                botonera = document.getElementById('ctrl_izq'),
+                modal = document.getElementById('info-programa'),
+                dBoton = document.createElement('button'), //copia boton
+                html, info;
 
-            dBoton.className = 'botones';
+            location.href += url;
+
+            dBoton.className = 'botones img-programa';
             dBoton.title = boton.title;
             dBoton.innerHTML = boton.innerHTML;
+            dBoton.style = boton.style;
+            dBoton.setAttribute('disabled', 'true');
 
-            let html = `${dBoton.outerHTML}
-                        <button id="lavar" onclick="lavar();" title="Empezar lavado"><i class="fa-solid fa-play"></i></button>
-                        <h2>${this.title}</h2>
-                        <p>${descrip[i]}</p>
-                        <button id="atras" onclick="cerrarDialogo(0);" class="boton" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></button>`;
+            html = `${dBoton.outerHTML}`;
 
-            dialogo.innerHTML = html;
-            document.body.appendChild(dialogo);
-            dialogo.showModal();
+            info = `<h2>${this.title}</h2>
+                    <p>${descrip[i]}</p>
+                  `;
+
+            botonera.insertAdjacentHTML('afterbegin', html);
+            modal.insertAdjacentHTML('beforeend', info);
+           /*  dialogo.innerHTML = html; */
+            /* document.body.appendChild(dialogo); */
+            /* dialogo.showModal(); */
         });
     });
 }

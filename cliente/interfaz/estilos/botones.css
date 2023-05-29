@@ -1,13 +1,13 @@
 .grid {
     --h-gap: 2.4em;
     --v-gap: 2em;
-	--num-cols: 4;
+	--n-cols: 4;
 
 	display: grid;
 
     grid-row-gap: var(--v-gap); /* Set the vertical gap */
     grid-column-gap: var(--h-gap); /* Set the horizontal gap */
-	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-template-columns: repeat(var(--n-cols), 1fr);
     align-items: stretch;
 }
 
@@ -26,8 +26,18 @@
         font-size: 1.2em;
         display: block;
     }
-
+    
+#lavar, .img-programa{
+    width: 50pt;
+    height: 50pt;
+}
 #lavar{
     background-color: var(--bv);
     color: var(--cv);
+    padding: 0.5em;
+    border-radius: 50%;
+    font-size: 1.75em;   
+}
+.img-programa{
+    cursor: auto;
 }
