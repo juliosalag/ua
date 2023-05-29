@@ -1,0 +1,20 @@
+/* --------------- MODAL --------------- */  
+.modal {
+    background-color: var(--bc);
+    display: none;
+}
+
+/* Display the modal when targeted */
+.modal:target {
+    display: flex;
+    box-shadow: 0px 0px 0px 5px rgb(64 64 64); /* evita q es veja el marge dels botons */
+}
+
+#info-programa{
+    margin-left: 1.5em;
+}
+    #info-programa > h2{
+        color: var(--t);
+        margin: 0;
+        font-size: 1.75em;
+    }
