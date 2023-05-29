@@ -41,6 +41,10 @@ function customStyle() {
     }
 }
 
+/* ------------------- CÓDIGO PROGRAMAS.HTML ------------------- */
+var prg; //variable global de programa
+
+/* seleccion de programa + info */
 function programa() {
     let botones = document.querySelectorAll('.botones'),
         //descripciones para cada programa (MIRAR DE CAMBIAR FORMATO (JSON))
@@ -57,12 +61,12 @@ function programa() {
     botones.forEach(function(boton, i) {
         //se cogen los parametros del boton
         boton.addEventListener('click', function() {
-            let /* dialogo = document.createElement('dialog'), */
-                url = '#mprograma',
+            let url = '#mprograma',
                 botonera = document.getElementById('ctrl_izq'),
                 modal = document.getElementById('info-programa'),
                 dBoton = document.createElement('button'), //copia boton
-                html, info;
+                html, info,
+                play = document.getElementById('lavar');
 
             location.href += url;
 
@@ -73,21 +77,31 @@ function programa() {
             dBoton.setAttribute('disabled', 'true');
 
             html = `${dBoton.outerHTML}`;
-
             info = `<h2>${this.title}</h2>
-                    <p>${descrip[i]}</p>
-                  `;
+                    <p>${descrip[i]}</p>`;
 
             botonera.insertAdjacentHTML('afterbegin', html);
             modal.insertAdjacentHTML('beforeend', info);
-           /*  dialogo.innerHTML = html; */
-            /* document.body.appendChild(dialogo); */
-            /* dialogo.showModal(); */
+
+            prg = this.title;
+            //lavar.addEventListener('click', infoLavado(this.title));
         });
     });
 }
 
-function cerrarDialogo(valor) {
-    document.querySelector('dialog').close(); //en açò NOMÉS no es borra del html
-    document.querySelector('dialog').remove(); //en açò si
+// settear info de lavado en el sessionStorage
+function infoLavado(prg){
+    let a = prg.split(' ').pop(),
+        // JavaScript object
+        info ={ programa: a,
+                tiempo: 1,
+                temperatura: 60
+              },
+        jsonString = JSON.stringify(info); // Convertir a JSON string
+    
+    // Set the JSON string to session storage
+    sessionStorage.setItem('infoPrograma', jsonString);
+
+    //redirigir a index (modificar per a que siga especial)
+    window.location.href = 'index.html'
 }
