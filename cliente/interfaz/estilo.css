@@ -14,6 +14,8 @@ html{
     --t: #fff;          /* text */
     --bv: #d5e8d4;      /* backgound verd: acceptar, play */
     --cv: #4a663a;      /* color verd */
+    --bn30: rgba(0,0,0,.3); /* background-color negre 30% */
+    --cb70:rgba(255,255,255,.7); /* color blanc 70% */
 
     /* ------ tamanys ------ */
     --w: 510pt;           /* width */
@@ -126,7 +128,7 @@ p{
 
 #ctrl_der{
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
 }
 
     /* #controles > div > *{

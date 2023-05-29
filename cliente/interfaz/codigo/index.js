@@ -1,3 +1,11 @@
+//per a comprovar tabs
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+      const focusedElement = document.activeElement;
+      console.log(focusedElement); // Output: The currently focused element
+    }
+});
+
 /* ------------------- CÓDIGO INDEX.HTML Y COMUNES ------------------- */
 //Hora reloj analógico
 if(document.getElementById("hour")) {
@@ -39,6 +47,54 @@ function customStyle() {
         root.style.setProperty('--h2', '145pt');
         hora.style.setProperty('display', 'none');
     }
+}
+
+//comprueba si hay un programa iniciado
+function pIniciado(){
+    if(cModales() == 'lavando'){
+        let atras = document.getElementById('atras'),
+            pausa = document.getElementById('pausa'),
+            botones = document.querySelectorAll('#ctrl_izq > a'),
+            botonera = document.getElementById('ctrl_izq'),
+            info = JSON.parse( sessionStorage['infoPrograma'] ),
+            html;
+
+        //acomodamos interfaz a la de programa iniciado
+        atras.removeAttribute('disabled');
+        pausa.removeAttribute('disabled');
+        botones.forEach(function(b, i){
+            b.style.display = 'none';
+        });
+
+        //coge la info del sessionStorage
+        html = `<h1>${info.temperatura}º</h1>
+                <h2>------</h2>
+                <h3>${info.programa}</h3>`;
+        botonera.insertAdjacentHTML('beforeend',html);
+    }
+}
+
+// devuelve si hay modales activos
+function cModales(){
+    let pagina = window.location.href.split('#').pop();
+    console.log(pagina);
+
+    return pagina;
+}
+
+//mostra modal de més informació sobre el llavat dut a terme
+function masInfo(){
+    let url = '#minfo',
+    modal = document.querySelector('.modal'),
+    info = JSON.parse( sessionStorage['infoPrograma'] ),
+    html;
+
+    location.href += url;
+
+    html = `<h1>${info.programa} ${info.temperatura}º</h1>
+            <h2>Tiempos restante</h2>
+            <p>agua y kWh/ciclo</p>`;
+    modal.innerHTML = html;
 }
 
 /* ------------------- CÓDIGO PROGRAMAS.HTML ------------------- */
@@ -91,9 +147,7 @@ function programa() {
 
 //si estem en info-programa, deshabilitar botons elecció de programa
 function deshabilitarBotones(){
-    let pagina = window.location.href.split('#').pop();
-    
-    if(pagina == 'mprograma'){
+    if(cModales() == 'mprograma'){
         //disablejar tots els botons
         let botones = document.querySelectorAll('.botones'),
             atras = document.getElementById('atras');
@@ -104,13 +158,6 @@ function deshabilitarBotones(){
         atras.setAttribute('tabindex', '-1'); //s'havia quedat l'enllaç per darrere tabejable
     }
 }
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Tab') {
-      const focusedElement = document.activeElement;
-      console.log(focusedElement); // Output: The currently focused element
-    }
-  });
 
 // settear info de lavado en el sessionStorage
 function infoLavado(prg){
@@ -125,6 +172,6 @@ function infoLavado(prg){
     // Set the JSON string to session storage
     sessionStorage.setItem('infoPrograma', jsonString);
 
-    //redirigir a index (modificar per a que siga especial)
-    window.location.href = 'index.html'
+    //redirigir a index (modificar per a que siga inici 2)
+    window.location.href = 'index.html#lavando'
 }

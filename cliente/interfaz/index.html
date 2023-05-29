@@ -40,7 +40,6 @@
             <div id="ctrl_izq">
                 <a href="programas.html" title="Programas">P</a>
                 <a href="diferido.html" title="Diferido"><i class="fa-solid fa-stopwatch fa-xs"></i></a>
-                <!-- cambiar icono o actualizar pack font awesome -->
             </div>
             <div id="reloj">
                 <div id="hour"></div>
@@ -58,8 +57,12 @@
                 <!-- ajussstar CSS -->
             </div>
             <div id="ctrl_der">
-                <button disabled id="atras"><i class="fa-solid fa-chevron-right"></i></button>
+                <button disabled id="pausa" title="pausar" class="botones"><i class="fa-solid fa-pause"></i></button>
+                <button disabled id="atras" title="más información" onclick="masInfo();"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
+
+            <!-- modal +info -->
+            <div id="minfo" class="modal"></div> <!-- posavo en js -->
         </div>
     </div>
 </body>
@@ -67,5 +70,6 @@
 <script src="codigo/bloquear.js"></script>
 <script>
     customStyle();
+    pIniciado();
 </script>
 </html>

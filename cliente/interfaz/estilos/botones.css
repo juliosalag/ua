@@ -27,17 +27,24 @@
         display: block;
     }
     
-#lavar, .img-programa{
+#lavar, .img-programa, #pausa{
     width: 50pt;
     height: 50pt;
 }
-#lavar{
-    background-color: var(--bv);
-    color: var(--cv);
+#lavar, #pausa{
     padding: 0.5em;
     border-radius: 50%;
     font-size: 1.75em;   
 }
+#lavar{
+    background-color: var(--bv);
+    color: var(--cv);
+}
 .img-programa{
     cursor: auto;
+}
+
+#pausa{
+    background-color: var(--bn30);
+    color: var(--cb70);
 }

@@ -3,6 +3,10 @@
     display: flex;
 }
 
+#ctrl-izq > h1, #ctrl-izq > h2, #ctrl-izq > h3{
+    color: var(--t);
+}
+
 /* Carrusel */
 .idiomas-carrusel-contenedor {
     display: flex;
