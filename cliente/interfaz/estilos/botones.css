@@ -26,3 +26,8 @@
         font-size: 1.2em;
         display: block;
     }
+
+#lavar{
+    background-color: var(--bv);
+    color: var(--cv);
+}

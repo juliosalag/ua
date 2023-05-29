@@ -1,5 +1,6 @@
 @import url(estilos/botones.css);
 @import url(estilos/reloj.css);
+@import url(estilos/ajustes.css);
 @import url(estilos/otros.css);
 
 @import url('https://fonts.googleapis.com/css2?&family=Nunito&display=swap');
@@ -10,6 +11,8 @@ html{
     --bc: #404040;      /* background-color */
     --bc50: #A0A0A0;    /* background-color 50% */
     --t: #fff;          /* text */
+    --bv: #d5e8d4;      /* backgound verd: acceptar, play */
+    --cv: #4a663a;      /* color verd */
 
     /* ------ tamanys ------ */
     --w: 510pt;           /* width */

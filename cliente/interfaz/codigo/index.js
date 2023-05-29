@@ -1,22 +1,24 @@
 /* ------------------- CÓDIGO INDEX.HTML Y COMUNES ------------------- */
 //Hora reloj analógico
-setInterval(() => {
-    d = new Date(); //object of date()
-    hr = d.getHours();
-    min = d.getMinutes();
-    sec = d.getSeconds();
-    hr_rotation = 30 * hr + min / 2; //converting current time
-    min_rotation = 6 * min;
-    sec_rotation = 6 * sec;
+if(document.getElementById("hour")) {
+    setInterval(() => {
+        d = new Date(); //object of date()
+        hr = d.getHours();
+        min = d.getMinutes();
+        sec = d.getSeconds();
+        hr_rotation = 30 * hr + min / 2; //converting current time
+        min_rotation = 6 * min;
+        sec_rotation = 6 * sec;
 
-    hour.style.transform = `rotate(${hr_rotation}deg)`;
-    minute.style.transform = `rotate(${min_rotation}deg)`;
-    second.style.transform = `rotate(${sec_rotation}deg)`;
+        hour.style.transform = `rotate(${hr_rotation}deg)`;
+        minute.style.transform = `rotate(${min_rotation}deg)`;
+        second.style.transform = `rotate(${sec_rotation}deg)`;
 
-    let ampm = document.getElementById("ampm");
-    ampm.innerHTML = hr < 12 ? "AM" : "PM";
+        let ampm = document.getElementById("ampm");
+        ampm.innerHTML = hr < 12 ? "AM" : "PM";
 
-}, 1000);
+    }, 1000);
+}
 
 function getPagina() {
     let pagina = window.location.href.split('/').pop();
@@ -65,6 +67,7 @@ function programa() {
             dBoton.innerHTML = boton.innerHTML;
 
             let html = `${dBoton.outerHTML}
+                        <button id="lavar" onclick="lavar();" title="Empezar lavado"><i class="fa-solid fa-play"></i></button>
                         <h2>${this.title}</h2>
                         <p>${descrip[i]}</p>
                         <button id="atras" onclick="cerrarDialogo(0);" class="boton" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></button>`;
