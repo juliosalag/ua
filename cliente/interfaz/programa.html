@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>
+    <title>Programas</title>
+    <script src="../electro.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="interfaz">
+        <!-- ------ BASE ------ -->
+        <!-- Izquierda -->
+        <div id="izq_sup">
+            <a href="apagado.html" title="Power-off"><i class="fa-solid fa-power-off"></i></a>
+            <span id="hora">???</span>
+        </div>
+        <div id="izq_inf">
+            <a href="ajustes.html" title="Ajustes"><i class="fa-solid fa-gear"></i></a>
+        </div>
+        <!-- Derecha -->
+        <div id="der_sup">
+            <!-- alomejor cambiar lo de botón -->
+            <button title="wifi"><i class="fa-solid fa-wifi"></i></button>
+            <button title="estado puerta"><i id="desactivar"  class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
+            <button title="móvil conectado" onclick="window.location.href = 'homeconnect-conectado.html'"><i class="fa-solid fa-mobile-screen"></i></button>
+        </div>
+        <!-- Lo dejo comentado para buscar mejores iconos-->
+        <!-- <div id="der_inf">
+			<button><i class="fa-solid fa-circle-exclamation"></i></button>
+			<button><i class="fa-solid fa-arrow-progress" style="color: aqua;"></i></button>
+			<button><i class="fa-solid fa-brightness"></i></button>
+		</div> -->
+
+        <div id="controles" class="grid" title="selección de programa de lavado">
+            <div>
+                <h1 id="tipoPrograma">Hola</h1>
+                <h2 id="descPrograma"></h2>
+                <button id="lavar" title="Empezar lavado"><i class="fa-solid fa-play"></i></button>
+                <h3>Tiempo</h3>
+                <input type="text" name="tiempo" id="tiempo" value="90" disabled>
+                <h3>Temperatura</h3>
+                <input type="text" name="temperatura" id="temperatura" value="70" disabled>
+            </div>
+            <div id="info-programa"></div>   
+            <a id="atras" href="programas.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
+        </div>
+
+        
+    </div>
+</body>
+<script src="codigo/bloquear.js"></script>
+<script src="main.js"></script>
+<script>
+    tipos = ['Programa ECO',
+            'Programa rápido',
+            'Programa intensivo',
+            'Programa copas',
+            'Programa silencioso',
+            'Programa automático',
+            'Programa media carga',
+    ];
+    descrip = ['Limpia la vajilla consumiendo menos agua y electricidad en cada lavado.',
+            'Adecuado para lavado rápido y vajillas con poca suciedad.',
+            'Lavado de cacerolas, sartenes, vajilla y cubiertos no delicados. Elimina restos de alimentos resecos, fuertemente incrustados o quemados.',
+            'Adecuado para vajilla delicada o sensibles a altas temperaturas.',
+            'Funcionamiento más sensible y silencioso. Se reduce la presión de ruido del lavado.',
+            'Optimiza el lavado en función del grado de suciedad del agua mediante el sistema de sensores.',
+            'Lavado de la vajilla colocada en la mitad superior o inferior del lavavajillas. La otra mitad no será lavada.'
+    ];
+
+    var tipo = document.getElementById("tipoPrograma");
+    var desc = document.getElementById("descPrograma");
+
+    const params = new URLSearchParams(window.location.search);
+    const tipoPar = params.get('tipo');
+
+    tipo.textContent = tipos[tipoPar-1];
+    desc.textContent = descrip[tipoPar-1];
+</script>
+
+</html>

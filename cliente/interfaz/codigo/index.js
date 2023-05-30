@@ -67,9 +67,9 @@ function pIniciado(){
         });
 
         //coge la info del sessionStorage
-        html = `<h1>${info.temperatura}º</h1>
-                <h2>------</h2>
-                <h3>${info.programa}</h3>`;
+        html = `<div><h1>${info.temperatura}º</h1>
+                <h2>${info.tiempo} min</h2>
+                <h1>${info.programa}</h1></div>`;
         botonera.insertAdjacentHTML('beforeend',html);
     }
 }
@@ -138,6 +138,7 @@ function programa() {
 
             botonera.insertAdjacentHTML('afterbegin', html);
             modal.insertAdjacentHTML('beforeend', info);
+            modal.insertAdjacentElement('beforeend', play);
 
             prg = this.title; //asignar variable global
             deshabilitarBotones();
@@ -164,8 +165,8 @@ function infoLavado(prg){
     let a = prg.split(' ').pop(),
         // JavaScript object
         info ={ programa: a,
-                tiempo: 1,
-                temperatura: 60
+                tiempo: 90,
+                temperatura: 80
               },
         jsonString = JSON.stringify(info); // Convertir a JSON string
     

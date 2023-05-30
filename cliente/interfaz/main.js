@@ -28,7 +28,8 @@ electro.on("connect", function() { // Esparar a que la librería se conecte con 
 
     // Actualizar el reloj
     electro.on("reloj", function(hora) {
-        document.getElementById("hora").innerHTML = hora.getHours() + ":" + (hora.getMinutes() < 10 ? "0" + hora.getMinutes() : hora.getMinutes()) /* + ":" + hora.getSeconds()*/ ;
+        if(document.getElementById("hora") != null)
+            document.getElementById("hora").innerHTML = hora.getHours() + ":" + (hora.getMinutes() < 10 ? "0" + hora.getMinutes() : hora.getMinutes()) /* + ":" + hora.getSeconds()*/ ;
     });
 
     // Con la presencia del usuario muestro los controles de cocinado
@@ -54,6 +55,7 @@ electro.on("connect", function() { // Esparar a que la librería se conecte con 
     // Lavar
     lavar.addEventListener("click", function() {
         console.log("Comienzo a lavar. Tiempo:", tiempo.value, "Temperatura:", temperatura.value);
+        //window.location.href = "index.html";
         // Bloquear controles
         lavar.disabled = true;
         tiempo.disabled = true;
