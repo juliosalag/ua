@@ -22,7 +22,7 @@ function nivelAgua(objetivo, callback) {
     electro.on("nivelAgua", agua);
 }
 
-electro.on("connect", function() { // Esparar a que la librería se conecte con el electrodoméstico
+electro.on("connect", function() { // Esperar a que la librería se conecte con el electrodoméstico
     console.log("Ya estoy conectado con la electrodoméstico!!")
     console.log("Con este hay " + electro.clientes + " clientes conectados");
 
@@ -56,6 +56,7 @@ electro.on("connect", function() { // Esparar a que la librería se conecte con 
     lavar.addEventListener("click", function() {
         console.log("Comienzo a lavar. Tiempo:", tiempo.value, "Temperatura:", temperatura.value);
         //window.location.href = "index.html";
+        sessionStorage.setItem("lavado", true);
         // Bloquear controles
         lavar.disabled = true;
         tiempo.disabled = true;
@@ -68,32 +69,40 @@ electro.on("connect", function() { // Esparar a que la librería se conecte con 
             setTimeout(function() {
                 console.log("Cierro el detergente");
                 electro.aperturaDetergente = false;
-                // Calentar el agua
-                electro.resistencia = true;
 
-                function temp(t) { // funcion termostato
-                    if (t > temperatura.value) {
-                        electro.resistencia = false;
-                    } else {
-                        electro.resistencia = true;
-                    }
-                }
-                electro.on("temperatura", temp);
-                // Esperar el tiempo de lavado
-                console.log("Empiezo a lavar")
-                electro.motor = true;
+                electro.aperturaAbrillandador = true;
+                console.log("Abro el abrillantador y espero 1 seg");
                 setTimeout(function() {
-                    console.log("Fin de lavado");
-                    electro.off("temperatura", temp); // quito el termostato
-                    electro.motor = false;
-                    electro.resistencia = false;
-                    nivelAgua(0, function() {
-                        // NO está implementado pero habría que hacer el abrillantado (llenando otra vez de agua y abriendo la puerta del abrillantador)
-                        lavar.disabled = false;
-                        tiempo.disabled = false;
-                        temperatura.disabled = false;
-                    });
-                }, tiempo.value * 1000);
+                    console.log("Cierro el abrillantador");
+                    electro.aperturaAbrillandador = false;
+                    // Calentar el agua
+                    electro.resistencia = true;
+
+                    function temp(t) { // funcion termostato
+                        if (t > temperatura.value) {
+                            electro.resistencia = false;
+                        } else {
+                            electro.resistencia = true;
+                        }
+                    }
+                    electro.on("temperatura", temp);
+                    // Esperar el tiempo de lavado
+                    console.log("Empiezo a lavar")
+                    electro.motor = true;
+                    setTimeout(function() {
+                        console.log("Fin de lavado");
+                        electro.off("temperatura", temp); // quito el termostato
+                        electro.motor = false;
+                        electro.resistencia = false;
+                        nivelAgua(0, function() {
+                            // NO está implementado pero habría que hacer el abrillantado (llenando otra vez de agua y abriendo la puerta del abrillantador)
+                            lavar.disabled = false;
+                            //tiempo.disabled = false;
+                            //temperatura.disabled = false;
+                            sessionStorage.setItem("lavado", false);
+                        });
+                    }, tiempo.value * 1000);
+                }, 1000);
             }, 1000);
         });
     });
