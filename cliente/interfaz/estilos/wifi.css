@@ -1,0 +1,45 @@
+#vertical > h2{
+    font-size: 1.5em;
+    padding: 0 1em;
+    color: var(--t);
+    margin: 0px;
+}
+
+#vertical h3{
+    font-size: 0.8em;
+    padding: 0 1em;
+    color: var(--bc50);
+    margin: 0px;
+}
+
+#horizontal > h2{
+    font-size: 2em;
+    padding: 0.2em 1em;
+    color: var(--t);
+    margin: 0px;
+}
+
+#horizontal h3{
+    font-size: 0.8em;
+    padding: 0 1em;
+    color: var(--bc50);
+    margin: 0px;
+}
+
+#horizontal{
+    justify-content: flex-start;
+}
+
+#vertical{
+    text-align: center;
+}
+
+#controles i {
+    font-size: 2em;
+    color: var(--t);
+    padding-left: 1em;
+}
+
+#controles a{
+    font-size: 1em;
+}
