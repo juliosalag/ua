@@ -15,6 +15,8 @@ function disableLinks() {
         if (links[i].id != "desactivar") {
             links[i].addEventListener('click', preventDefault);
             links[i].classList.add('disabled');
+            if(links[i].tagName == 'BUTTON')
+                links[i].disabled = true;
         }
     }
 }
@@ -26,6 +28,8 @@ function enableLinks() {
         if (links[i].id != "desactivar") {
             links[i].removeEventListener('click', preventDefault);
             links[i].classList.remove('disabled');
+            if(links[i].tagName == 'BUTTON')
+                links[i].disabled = false;
         }
     }
 }

@@ -150,3 +150,19 @@ p{
 .transparente {
     opacity: 0.5;
 }
+
+#peq{
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: var(--bc50);
+}
+
+#med{
+    font-size: 1.8em;
+    margin-right: 10px;
+}
+
+#gra{
+    font-size: 2.4em;
+    margin-right: 20px;
+}

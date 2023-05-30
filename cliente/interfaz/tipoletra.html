@@ -36,20 +36,53 @@
 			<button><i class="fa-solid fa-brightness"></i></button>
 		</div>
 		-->
-        <div id="controles" class="grid" title="selección de ajustes">
-            <!-- mirar que programas poner -->
-            <button class="botones" title="Volumen" onclick="window.location.href = 'volumen.html'"><i class="fa-solid fa-volume-high"></i></button>
-            <button class="botones" title="Ajustar Wifi" onclick="window.location.href = 'wifi.html'"><i class="fa-solid fa-wifi"></i></button>
-            <button class="botones" title="Conectar home connect" onclick="window.location.href = 'homeconnect.html'"><i class="fa-solid fa-mobile-screen"></i></button>
-            <button class="botones" title="Tamaño de letra" onclick="window.location.href = 'tipoletra.html'">Aa</i></button>
-            <button class="botones" title="Nivel microfono" onclick="window.location.href = 'microfono.html'"><i class="fa-solid fa-microphone"></i></button>
-            <button class="botones" title="Cambiar hora"><i class="fa-regular fa-clock"></i></button>
-            <button class="botones" title="Idioma" onclick="window.location.href = 'idioma.html'"><i class="fa-solid fa-language"></i></button>
-            <a id="atras" href="index.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
+        <div id="controles" class="d3">
+            <div id="vertical">
+                <h2>Tamaño letra</h2>
+                <div id="horizontal">
+                    <button id="peq">Pequeño</button>
+                    <button id="med">Mediano</button>
+                    <button id="gra">Grande</button>
+                </div>
+            </div>
+            <a id="atras" href="ajustes.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
         </div>
     </div>
 </body>
 
 <script src="codigo/bloquear.js"></script>
+
+<script>
+    function cambiarLetra(tipoLetra){
+        console.log(tipoLetra);
+        sessionStorage.setItem('tipoletra', tipoLetra);
+        cargarLetra();
+    }
+
+    function cargarLetra(){
+        var tipoLetra = sessionStorage.getItem('tipoletra');
+        var buttons = document.querySelectorAll("button");
+
+        for (var i = 0; i < buttons.length; i++){
+            buttons[i].style.color = buttons[i].id == tipoLetra ? `var(--t)` : `var(--bc50)`;
+        }
+    }
+
+    const boton1 = document.getElementById("peq");
+    boton1.addEventListener("click", function() {
+        cambiarLetra('peq');
+    });
+    const boton2 = document.getElementById("med");
+    boton2.addEventListener("click", function() {
+        cambiarLetra('med');
+    });
+    const boton3 = document.getElementById("gra");
+    boton3.addEventListener("click", function() {
+        cambiarLetra('gra');
+    });
+
+    cargarLetra();
+
+</script>
 
 </html>
