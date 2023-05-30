@@ -166,3 +166,9 @@ p{
     font-size: 2.4em;
     margin-right: 20px;
 }
+
+.vertical-line {
+    border-left: 3px solid var(--bc50);
+    border-radius: 2px;
+    height: 150px;
+}

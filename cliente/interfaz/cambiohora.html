@@ -11,6 +11,7 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="estilos/botones.css">
+    <link rel="stylesheet" href="estilos/cambiohora.css">
 </head>
 
 <body>
@@ -18,7 +19,6 @@
         <!-- Izquierda -->
         <div id="izq_sup">
             <a href="apagado.html"><button><i class="fa-solid fa-power-off"></i></button></a>
-            <span id="hora">???</span>
         </div>
         <!--<div id="izq_inf">
             <a href="ajustes.html"><button><i class="fa-solid fa-gear"></i></button></a>
@@ -36,16 +36,26 @@
 			<button><i class="fa-solid fa-brightness"></i></button>
 		</div>
 		-->
-        <div id="controles" class="grid" title="selección de ajustes">
-            <!-- mirar que programas poner -->
-            <button class="botones" title="Volumen" onclick="window.location.href = 'volumen.html'"><i class="fa-solid fa-volume-high"></i></button>
-            <button class="botones" title="Ajustar Wifi" onclick="window.location.href = 'wifi.html'"><i class="fa-solid fa-wifi"></i></button>
-            <button class="botones" title="Conectar home connect" onclick="window.location.href = 'homeconnect.html'"><i class="fa-solid fa-mobile-screen"></i></button>
-            <button class="botones" title="Tamaño de letra" onclick="window.location.href = 'tipoletra.html'">Aa</i></button>
-            <button class="botones" title="Nivel microfono" onclick="window.location.href = 'microfono.html'"><i class="fa-solid fa-microphone"></i></button>
-            <button class="botones" title="Cambiar hora" onclick="window.location.href = 'cambiohora.html'"><i class="fa-regular fa-clock"></i></button>
-            <button class="botones" title="Idioma" onclick="window.location.href = 'idioma.html'"><i class="fa-solid fa-language"></i></button>
-            <a id="atras" href="index.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
+        <div id="controles" class="d3">
+            <div id="horizontal">
+                <div id="vertical">
+                    <h2>Hora</h2>
+                    <span id="hora">???</span>
+                    <h3>GMT+01:00</h3>
+                </div>
+                <div class="vertical-line"></div>
+                <div id="vertical">
+                    <div id="horizontal">
+                        <h3>Fecha y hora automáticas</h3>
+                        <input type="checkbox" checked>
+                    </div>
+                    <div id="horizontal">
+                        <h3>Zona horaria automática</h3>
+                        <input type="checkbox" checked>
+                    </div>
+                </div>
+            </div>
+            <a id="atras" href="ajustes.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
         </div>
     </div>
 </body>
