@@ -47,4 +47,7 @@
 #pausa{
     background-color: var(--bn30);
     color: var(--cb70);
+    position: absolute;
+    top: 0;
+    right: 0;
 }

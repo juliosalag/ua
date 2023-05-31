@@ -12,7 +12,7 @@ function disableLinks() {
     icon.className = "fa-solid fa-lock";
     console.log("bloquear pantalla");
     for (var i = 0; i < links.length; i++) {
-        if (links[i].id != "desactivar") {
+        if (links[i].id != "desactivar"/* || links[i].id != "pausa"*/) {
             links[i].addEventListener('click', preventDefault);
             links[i].classList.add('disabled');
             if(links[i].tagName == 'BUTTON')

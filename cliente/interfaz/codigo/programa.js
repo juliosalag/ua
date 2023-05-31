@@ -84,18 +84,26 @@ function actualizarValores(){
     sessionStorage.setItem("tiempoRestante", sessionStorage.getItem("tiempoRestante") - 1);
 
     var tiempoRestante = document.getElementById('tiempoRestante');
-    tiempoRestante.textContent = 'Tiempo restante: ' + sessionStorage.getItem("tiempoRestante") + ' min';
+    tiempoRestante.innerHTML = '<i class="fa-regular fa-clock"></i> Tiempo restante: ' + sessionStorage.getItem("tiempoRestante") + ' min';
 
     var temperaturaActual = document.getElementById('temperaturaActual');
-    temperaturaActual.textContent = 'Temperatura: ' + electro.temperatura + 'º';
+    temperaturaActual.innerHTML = '<i class="fa-solid fa-temperature-three-quarters"></i> Temperatura: ' + electro.temperatura + 'º';
 
     var consumoActual = document.getElementById('consumoActual');
-    consumoActual.textContent = 'Consumo: ' + electro.consumo + ' kWh/ciclo';
+    consumoActual.innerHTML = '<i class="fa-solid fa-bolt-lightning"></i> Consumo: ' + electro.consumo + ' kWh/ciclo';
 }
 
 setInterval(() => {
     actualizarValores();
 }, 1000);
+
+
+function cambioIcono(){
+    let b = document.getElementById('pausa');
+    console.log(b);
+
+    b.innerHTML = '<i class="fa-solid fa-play"></i>';
+}
 
 /*
 <h2 id="tiempoRestante">Tiempo restante</h2>
