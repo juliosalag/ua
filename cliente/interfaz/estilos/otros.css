@@ -28,22 +28,31 @@
     font-size: x-large;
     margin: 0.3em;
 }
-.bienvenida > a > i{
-    margin-right: .5em;
-}
+    .bienvenida > a > i{
+        margin-right: .5em;
+    }
 
 /* Carrusel */
-.idiomas-carrusel-contenedor {
-    display: flex;
+.idiomas-contenedor {
     justify-content: center;
-    align-items: center;
 }
-/* .idiomas-carrusel-contenedor i{
-    margin: 0pt 15pt;
-    font-size: 20pt;
-    color: #fff;
-}
-.idiomas-carrusel-contenedor > div > img{
-    width: 100pt;
-    margin: 15pt;
-} */
+    .idiomas-contenedor, .idiomas-contenedor > div{
+        display: flex;
+        align-items: center;
+    }
+        .idiomas-contenedor > div > button{
+            padding: 0;
+        }
+            .idiomas-contenedor > div > button > img{
+                width: 75pt;
+                margin: 8pt;
+            }
+            .idiomas-contenedor > div > button > img:hover{
+                width: 86pt;
+                margin: 5pt;
+            }
+    .idiomas-contenedor > a{
+        position: absolute;
+        top: 90%;
+        left: 36%;
+    }
