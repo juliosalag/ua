@@ -1,0 +1,15 @@
+#tipoPrograma{
+    color: var(--t);
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+}
+
+#descPrograma, #tiempoRestante, #temperaturaActual, #consumoActual{
+    color: var(--bc50);
+    margin: 0;
+    font-size: 1.2em;
+}
+
+#horizontal *{
+    visibility: hidden;
+}

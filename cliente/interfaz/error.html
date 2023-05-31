@@ -5,7 +5,7 @@
     <meta charset="utf8">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/27260d853d.js" crossorigin="anonymous"></script>
-    <title>Aviso</title>
+    <title>Error</title>
     <script src="../electro.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="estilo.css">
@@ -29,21 +29,21 @@
             <button title="estado puerta"><i id="desactivar"  class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
             <button title="móvil conectado" onclick="window.location.href = 'homeconnect-conectado.html'"><i class="fa-solid fa-mobile-screen"></i></button>
         </div>
-        <!-- Lo dejo comentado para buscar mejores iconos-->
-        <!-- <div id="der_inf">
-			<button><i class="fa-solid fa-circle-exclamation"></i></button>
-			<button><i class="fa-solid fa-arrow-progress" style="color: aqua;"></i></button>
-			<button><i class="fa-solid fa-brightness"></i></button>
-		</div> -->
+        <div id="der_inf">
+			<button onclick="window.location.href='error.html'"><i class="fa-solid fa-triangle-exclamation transparente" style="color: red;"></i></button>
+			<button><i class="fa-solid fa-s"></i></button>
+			<button><i class="fa-solid fa-sun"></i></button>
+		</div>
 
         <div id="controles" class="alerta d3">
             <div id="horizontal">
-                <i class="fa-solid fa-circle-exclamation transparente" style="font-size: 30pt; margin-right: 40px; color: red;"></i>
+                <i class="fa-solid fa-triangle-exclamation transparente" style="font-size: 40pt; margin-right: 40px; color: red;"></i>
                 <div>
                     <h1 style="margin: 0; color: var(--t);">Error</h1>
                     <p style="margin: 10px 0;"><b>E:30-20</b> - La manguera de alimentación de agua esta doblada</p>
                 </div>
             </div>
+            <a id="atras" href="index.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
         </div>        
     </div>
 </body>

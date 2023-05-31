@@ -94,15 +94,16 @@ p{
         font-size: 18pt;
     }
 
-#der_inf{
-    bottom: 0;
-    right: 0;
+#der_inf {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    margin: 5px;
 }
-    #der_inf button{
-        margin: 0pt 0pt 9pt 9pt;
-        padding: 0pt 0pt 9pt 9pt;
-        font-size: 9pt;
-    }
+
+#der_inf button{
+    font-size: 13pt;
+}
 
 /* div de contenido */
 #controles, .modal{

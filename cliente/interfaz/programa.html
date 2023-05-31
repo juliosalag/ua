@@ -8,6 +8,7 @@
     <title>Programas</title>
     <script src="../electro.js"></script>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilos/programa.css">
 </head>
 
 <body>
@@ -28,25 +29,34 @@
             <button title="estado puerta"><i id="desactivar"  class="fa-solid fa-unlock"></i><!-- <i class="fa-solid fa-lock"></i> --></button>
             <button title="móvil conectado" onclick="window.location.href = 'homeconnect-conectado.html'"><i class="fa-solid fa-mobile-screen"></i></button>
         </div>
-        <!-- Lo dejo comentado para buscar mejores iconos-->
-        <!-- <div id="der_inf">
-			<button><i class="fa-solid fa-circle-exclamation"></i></button>
-			<button><i class="fa-solid fa-arrow-progress" style="color: aqua;"></i></button>
-			<button><i class="fa-solid fa-brightness"></i></button>
-		</div> -->
+        <div id="der_inf">
+			<button><i class="fa-solid fa-s"></i></button>
+			<button><i class="fa-solid fa-sun"></i></button>
+		</div>
 
         <div id="controles" class="grid" title="selección de programa de lavado">
-            <div>
-                <h1 id="tipoPrograma">Hola</h1>
-                <h2 id="descPrograma"></h2>
+            <div class="infoPrograma">
+                <h1 id="tipoPrograma">Tipo programa</h1>
+                <h2 id="descPrograma">Descripcion programa</h2>
                 <button id="lavar" title="Empezar lavado"><i class="fa-solid fa-play"></i></button>
-                <h3>Tiempo</h3>
-                <input type="text" name="tiempo" id="tiempo" value="5" disabled>
-                <h3>Temperatura</h3>
-                <input type="text" name="temperatura" id="temperatura" value="70" disabled>
+                <div id="horizontal">
+                    <h3>Tiempo</h3>
+                    <input type="text" name="tiempo" id="tiempo" value="5" disabled>
+                    <h3>Temperatura</h3>
+                    <input type="text" name="temperatura" id="temperatura" value="70" disabled>
+                </div>
             </div>
             <div id="info-programa"></div>   
             <a id="atras" href="programas.html" title="volver atrás"><i class="fa-solid fa-chevron-left"></i></a>
+        </div>
+
+        <div id="controles" class="programaIniciado" title="información del lavado" style="visibility: hidden;">
+            <div class="infoPrograma">
+                <h1 id="tipoPrograma">Programa iniciado</h1>
+                <h2 id="tiempoRestante">Tiempo restante</h2>
+                <h2 id="temperaturaActual">Temperatura</h2>
+                <h2 id="consumoActual">Consumo</h2>
+            </div>
         </div>
 
         
@@ -54,32 +64,6 @@
 </body>
 <script src="codigo/bloquear.js"></script>
 <script src="main.js"></script>
-<script>
-    tipos = ['Programa ECO',
-            'Programa rápido',
-            'Programa intensivo',
-            'Programa copas',
-            'Programa silencioso',
-            'Programa automático',
-            'Programa media carga',
-    ];
-    descrip = ['Limpia la vajilla consumiendo menos agua y electricidad en cada lavado.',
-            'Adecuado para lavado rápido y vajillas con poca suciedad.',
-            'Lavado de cacerolas, sartenes, vajilla y cubiertos no delicados. Elimina restos de alimentos resecos, fuertemente incrustados o quemados.',
-            'Adecuado para vajilla delicada o sensibles a altas temperaturas.',
-            'Funcionamiento más sensible y silencioso. Se reduce la presión de ruido del lavado.',
-            'Optimiza el lavado en función del grado de suciedad del agua mediante el sistema de sensores.',
-            'Lavado de la vajilla colocada en la mitad superior o inferior del lavavajillas. La otra mitad no será lavada.'
-    ];
-
-    var tipo = document.getElementById("tipoPrograma");
-    var desc = document.getElementById("descPrograma");
-
-    const params = new URLSearchParams(window.location.search);
-    const tipoPar = params.get('tipo');
-
-    tipo.textContent = tipos[tipoPar-1];
-    desc.textContent = descrip[tipoPar-1];
-</script>
+<script src="codigo/programa.js"></script>
 
 </html>

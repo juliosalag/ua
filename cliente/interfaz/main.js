@@ -22,6 +22,10 @@ function nivelAgua(objetivo, callback) {
     electro.on("nivelAgua", agua);
 }
 
+function getConsumo(){
+    return console.log(electro.consumo);
+}
+
 electro.on("connect", function() { // Esperar a que la librería se conecte con el electrodoméstico
     console.log("Ya estoy conectado con la electrodoméstico!!")
     console.log("Con este hay " + electro.clientes + " clientes conectados");
@@ -56,7 +60,7 @@ electro.on("connect", function() { // Esperar a que la librería se conecte con 
     lavar.addEventListener("click", function() {
         console.log("Comienzo a lavar. Tiempo:", tiempo.value, "Temperatura:", temperatura.value);
         //window.location.href = "index.html";
-        sessionStorage.setItem("lavado", true);
+        empezarLavado();
         // Bloquear controles
         lavar.disabled = true;
         tiempo.disabled = true;
@@ -88,6 +92,7 @@ electro.on("connect", function() { // Esperar a que la librería se conecte con 
                     electro.on("temperatura", temp);
                     // Esperar el tiempo de lavado
                     console.log("Empiezo a lavar")
+                    getConsumo();
                     electro.motor = true;
                     setTimeout(function() {
                         console.log("Fin de lavado");
@@ -99,7 +104,7 @@ electro.on("connect", function() { // Esperar a que la librería se conecte con 
                             lavar.disabled = false;
                             //tiempo.disabled = false;
                             //temperatura.disabled = false;
-                            sessionStorage.setItem("lavado", false);
+                            terminarLavado();
                         });
                     }, tiempo.value * 1000);
                 }, 1000);
