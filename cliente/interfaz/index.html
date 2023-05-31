@@ -31,10 +31,10 @@
         </div>
         <!-- Lo dejo comentado para buscar mejores iconos-->
         <div id="der_inf">
-			<button onclick="window.location.href='error.html'"><i class="fa-solid fa-triangle-exclamation transparente" style="color: red;"></i></button>
-			<button><i class="fa-solid fa-s"></i></button>
-			<button><i class="fa-solid fa-sun"></i></button>
-		</div>
+            <button onclick="window.location.href='error.html'"><i class="fa-solid fa-triangle-exclamation transparente" style="color: red;"></i></button>
+            <button><i class="fa-solid fa-s"></i></button>
+            <button><i class="fa-solid fa-sun"></i></button>
+        </div>
 
         <div id="controles" class="d3">
             <div id="ctrl_izq">
@@ -56,9 +56,13 @@
                 <p id="ampm"></p>
                 <!-- ajussstar CSS -->
             </div>
-
+            <div id="ctrl_der">
+                <!--<button disabled id="pausa" title="pausar" class="botones"><i class="fa-solid fa-pause"></i></button>-->
+                <button disabled id="atras" title="más información" onclick="masInfo();"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
             <!-- modal +info -->
-            <div id="minfo" class="modal"></div> <!-- posavo en js -->
+            <div id="minfo" class="modal"></div>
+            <!-- posavo en js -->
         </div>
     </div>
 </body>
@@ -68,4 +72,5 @@
     customStyle();
     pIniciado();
 </script>
+
 </html>
