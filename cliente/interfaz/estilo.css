@@ -16,6 +16,7 @@ html{
     --cv: #4a663a;      /* color verd */
     --bn30: rgba(0,0,0,.3); /* background-color negre 30% */
     --cb70:rgba(255,255,255,.7); /* color blanc 70% */
+    --r: #E02945 ;           /* color roig */
 
     /* ------ tamanys ------ */
     --w: 510pt;           /* width */

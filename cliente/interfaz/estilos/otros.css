@@ -61,3 +61,7 @@
 .alerta > div > h1{
     color: var(--t);
 }
+.error{
+    background-color: var(--r);
+    opacity: 50%;
+}
