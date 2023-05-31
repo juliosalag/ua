@@ -1,12 +1,12 @@
 function cargarDatos(){
     tipos = ['Programa ECO',
-                'Programa rápido',
-                'Programa intensivo',
-                'Programa copas',
-                'Programa silencioso',
-                'Programa automático',
-                'Programa media carga',
-    ];
+            'Programa rápido',
+            'Programa intensivo',
+            'Programa copas',
+            'Programa silencioso',
+            'Programa automático',
+            'Programa media carga'
+];
     descrip = ['Limpia la vajilla consumiendo menos agua y electricidad en cada lavado.',
             'Adecuado para lavado rápido y vajillas con poca suciedad.',
             'Lavado de cacerolas, sartenes, vajilla y cubiertos no delicados. Elimina restos de alimentos resecos, fuertemente incrustados o quemados.',
@@ -14,6 +14,22 @@ function cargarDatos(){
             'Funcionamiento más sensible y silencioso. Se reduce la presión de ruido del lavado.',
             'Optimiza el lavado en función del grado de suciedad del agua mediante el sistema de sensores.',
             'Lavado de la vajilla colocada en la mitad superior o inferior del lavavajillas. La otra mitad no será lavada.'
+    ];
+    tiempos = ['120',
+            '30',
+            '50',
+            '60',
+            '50',
+            '5',
+            '20'
+    ];
+    temperaturas = ['30',
+            '45',
+            '90',
+            '30',
+            '50',
+            '50',
+            '70'
     ];
 
     var tipo = document.querySelectorAll('#tipoPrograma');
@@ -26,6 +42,12 @@ function cargarDatos(){
         elemento.textContent = tipos[tipoPar-1];
     });
     desc.textContent = descrip[tipoPar-1];
+
+    var tiempo = document.getElementById("tiempo");
+    var temperatura = document.getElementById("temperatura");
+    
+    tiempo.value = tiempos[tipoPar-1] + ' min';
+    temperatura.value = temperaturas[tipoPar-1] + 'º';
 }
 
 cargarDatos();
@@ -62,7 +84,7 @@ function actualizarValores(){
     sessionStorage.setItem("tiempoRestante", sessionStorage.getItem("tiempoRestante") - 1);
 
     var tiempoRestante = document.getElementById('tiempoRestante');
-    tiempoRestante.textContent = 'Tiempo restante: ' + sessionStorage.getItem("tiempoRestante") + ' segundos';
+    tiempoRestante.textContent = 'Tiempo restante: ' + sessionStorage.getItem("tiempoRestante") + ' min';
 
     var temperaturaActual = document.getElementById('temperaturaActual');
     temperaturaActual.textContent = 'Temperatura: ' + electro.temperatura + 'º';

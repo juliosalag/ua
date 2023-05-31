@@ -22,10 +22,6 @@ function nivelAgua(objetivo, callback) {
     electro.on("nivelAgua", agua);
 }
 
-function getConsumo(){
-    return console.log(electro.consumo);
-}
-
 electro.on("connect", function() { // Esperar a que la librería se conecte con el electrodoméstico
     console.log("Ya estoy conectado con la electrodoméstico!!")
     console.log("Con este hay " + electro.clientes + " clientes conectados");
@@ -92,7 +88,6 @@ electro.on("connect", function() { // Esperar a que la librería se conecte con 
                     electro.on("temperatura", temp);
                     // Esperar el tiempo de lavado
                     console.log("Empiezo a lavar")
-                    getConsumo();
                     electro.motor = true;
                     setTimeout(function() {
                         console.log("Fin de lavado");
