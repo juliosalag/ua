@@ -82,4 +82,8 @@
 
 #ampm{
     text-align: right;
+    margin: 0;
+    position: absolute;
+    top: 12em;
+    right: .2em;
 }

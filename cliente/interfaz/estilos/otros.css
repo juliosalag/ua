@@ -56,3 +56,8 @@
         top: 90%;
         left: 36%;
     }
+
+/* alertas y errores */
+.alerta > div > h1{
+    color: var(--t);
+}
