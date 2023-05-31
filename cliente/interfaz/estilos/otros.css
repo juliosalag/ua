@@ -7,6 +7,31 @@
     color: var(--t);
 }
 
+/* bienvenida */
+.bienvenida > h1{
+    color: var(--t);
+    margin: 0;
+    font-size: 2.5em;
+    position: absolute;
+    left: 25%;
+    top: -0.5em;
+}
+.bienvenida > p{
+    text-align: center;
+    font-size: 4.5em;
+    margin: 0.7em 0 0 0;
+}
+.bienvenida > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    margin: 0.3em;
+}
+.bienvenida > a > i{
+    margin-right: .5em;
+}
+
 /* Carrusel */
 .idiomas-carrusel-contenedor {
     display: flex;
