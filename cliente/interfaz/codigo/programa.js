@@ -16,12 +16,12 @@ function cargarDatos(){
             'Lavado de la vajilla colocada en la mitad superior o inferior del lavavajillas. La otra mitad no será lavada.'
     ];
     tiempos = ['120',
-            '30',
+            '20',
             '50',
             '60',
             '50',
             '5',
-            '20'
+            '30'
     ];
     temperaturas = ['30',
             '45',

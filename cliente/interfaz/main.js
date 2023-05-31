@@ -70,11 +70,6 @@ electro.on("connect", function() { // Esperar a que la librería se conecte con 
                 console.log("Cierro el detergente");
                 electro.aperturaDetergente = false;
 
-                electro.aperturaAbrillandador = true;
-                console.log("Abro el abrillantador y espero 1 seg");
-                setTimeout(function() {
-                    console.log("Cierro el abrillantador");
-                    electro.aperturaAbrillandador = false;
                     // Calentar el agua
                     electro.resistencia = true;
 
@@ -95,15 +90,20 @@ electro.on("connect", function() { // Esperar a que la librería se conecte con 
                         electro.motor = false;
                         electro.resistencia = false;
                         nivelAgua(0, function() {
-                            // NO está implementado pero habría que hacer el abrillantado (llenando otra vez de agua y abriendo la puerta del abrillantador)
-                            lavar.disabled = false;
-                            //tiempo.disabled = false;
-                            //temperatura.disabled = false;
-                            terminarLavado();
+                            electro.aperturaAbrillandador = true;
+                            console.log("Abro el abrillantador y espero 1 seg");
+                            setTimeout(function() {
+                                console.log("Cierro el abrillantador");
+                                electro.aperturaAbrillandador = false;
+                                // NO está implementado pero habría que hacer el abrillantado (llenando otra vez de agua y abriendo la puerta del abrillantador)
+                                lavar.disabled = false;
+                                //tiempo.disabled = false;
+                                //temperatura.disabled = false;
+                                terminarLavado();
+                            }, 1000);
                         });
                     }, tiempo.value * 1000);
                 }, 1000);
-            }, 1000);
         });
     });
 });

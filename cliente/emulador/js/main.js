@@ -45,8 +45,7 @@ $().ready(() => {
 
 		// Puerta
 		$("#puertaAbierta").click(function () {
-			if(sessionStorage.getItem("lavado") == false)
-				electro.puertaAbierta = !electro.puertaAbierta;
+			electro.puertaAbierta = !electro.puertaAbierta;
 		});
 
 		// Presencia
